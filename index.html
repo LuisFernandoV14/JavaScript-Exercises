@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Conceitos Básicos</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+
+    <div>
+
+        <div id="primeira">
+
+            <h1> Questão 1 - Contador </h1>
+
+            <button onclick="aumentar()"> Aumentar um </button>
+            <button onclick="reduzir()"> Reduzir um </button>
+            <p id="contador" style="margin-left: 95px;"> 0 </p>    
+
+            <hr>
+
+        </div>
+
+        <div id="segunda">
+
+            <h1> Questão 2 - Texto Dinâmico </h1>
+
+            <input type="text" id="inputTexto" placeholder="Digite algo">
+            <br> <br>
+            <button onclick="atualizarTexto()"> Adicionar texto na página</button>
+
+            <div id="txtdinamico">  </div>
+            
+
+            <hr>
+
+        </div>
+
+        <div id="terceira">
+
+            <h1> Questão 3 - Contador de Caracteres </h1>
+
+            <input type="text" id="inputContador" placeholder="Digite algo">
+            <br>
+            <div id="outputContador"></div>
+
+            <hr>
+        </div>
+
+        <div id="quarta">
+
+            <h1> Questão 4 - Adicionar Itens </h1>
+
+
+            <label for="inputLista">Escolha uma Tag:</label>
+            <select id="inputLista">
+                <option value="ul">ul</option>
+                <option value="ol">ol</option>
+                <option value="p">p</option>
+                <option value="h1">h1</option>
+                <option value="h2">h2</option>
+                <option value="h3">h3</option>
+            </select>
+            
+            <br>
+            <br>
+
+            <input type="text" id="textoItem" placeholder="Digite o texto da tag">
+            
+            <br>
+            <br>
+
+            <button type="button" onclick="adicionarItem()"> Adicionar tag na página </button>
+            
+            <br>
+            <div id="outputLista"> </div>
+
+            <hr>
+        </div>
+
+        <div id="quinta">
+
+            <h1> Questão 5 - Resetar Itens </h1>
+
+            <button type="button" onclick="resetar()"> Resetar tudo </button>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
