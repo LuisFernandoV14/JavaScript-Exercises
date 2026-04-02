@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+    <h1> Abasteça aqui seu veículo! </h1>
+
+    <p id="valorGasosa"> </p>
+    <p id="valorEtanona"> </p>
+    <p id="valorDieseira"> </p>
+
+    <hr>
+
+    <h1> Cálculo de preço </h1>
+
+    <form id="formularioCombustivel">
+        <label for="">Tipo Combustível</label>
+            <select name="combustivel" id="combustivel">
+                <option value=" ">Escolha uma opção</option>
+                <option value="Gasosa">Gasolina</option>
+                <option value="Etanona">Etanol</option>
+                <option value="Dieseira">Diesel</option>
+            </select>
+            <label for="">Quantidade de litros</label>
+            <input type="number" step="0.1" min="0" id="litros">
+        </form>
+        <h2>Resultado</h2>
+    <p id="resultado"></p>
+    
+
+    
+</body>
+</html>
