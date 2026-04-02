@@ -41,18 +41,30 @@ function calcularAbastecimento() {
     let escolha = document.getElementById("combustivel").value; 
     let id = "valor" + escolha;
 
+    if (id === "valor") {
+        let p = document.getElementById("resultado");
+        p.innerHTML = "Por favor, selecione um tipo de combustível.";
+        return;
+    }
+
     let elemento = document.getElementById(id);
     let precoPorLitro = elemento ? parseFloat(elemento.innerHTML.split("R$")[1]) : 0;
 
     let litros = document.getElementById("litros").value;
     let valorTotal = precoPorLitro * litros;
 
+    valorTotal = isNaN(valorTotal) ? 0 : valorTotal;
 
     let p = document.getElementById("resultado");
     p.innerHTML = "Valor total do abastecimento: " + formatarMoeda(valorTotal);    
 }
 
 function formatarMoeda(valor) {
+    if (valor < 0) {
+        valor *= -1;
+        window.alert("Funciona melhor com valores positivos mané. \nA não ser que seu carro subatômico seja movido a antimatéria, aí tudo bem.");
+    }
+
     return "R$" + valor.toLocaleString('pt-BR', {
             minimumFractionDigits: 2,
             maximumFractionDigits: 2
